@@ -58,44 +58,45 @@ class MainActivity : AppCompatActivity() {
                 }
                 if (tvValue.contains("-")) {
                     val splitValue = tvValue.split("-")
-                    var one = splitValue[0].toInt()
-                    var two = splitValue[1].toInt()
+
+                    var one = splitValue[0]
+                    var two = splitValue[1]
 
                     if(prefix.isNotEmpty()){
-                        prefix = prefix + one
+                        one = prefix + one
                     }
 
                     tvInput?.text = (one.toDouble() - two.toDouble()).toString()
 
                 }else  if (tvValue.contains("+")) {
                     val splitValue = tvValue.split("+")
-                    var one = splitValue[0].toInt()
-                    var two = splitValue[1].toInt()
+                    var one = splitValue[0]
+                    var two = splitValue[1]
 
                     if(prefix.isNotEmpty()){
-                        prefix = prefix + one
+                        one = prefix + one
                     }
 
                     tvInput?.text = (one.toDouble() + two.toDouble()).toString()
 
                 }else  if (tvValue.contains("/")) {
                     val splitValue = tvValue.split("/")
-                    var one = splitValue[0].toInt()
-                    var two = splitValue[1].toInt()
+                    var one = splitValue[0]
+                    var two = splitValue[1]
 
                     if(prefix.isNotEmpty()){
-                        prefix = prefix + one
+                        one = prefix + one
                     }
 
                     tvInput?.text = (one.toDouble() / two.toDouble()).toString()
 
                 }else  if (tvValue.contains("*")) {
                     val splitValue = tvValue.split("*")
-                    var one = splitValue[0].toInt()
-                    var two = splitValue[1].toInt()
+                    var one = splitValue[0]
+                    var two = splitValue[1]
 
                     if(prefix.isNotEmpty()){
-                        prefix = prefix + one
+                        one = prefix+one
                     }
 
                     tvInput?.text = remozeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
